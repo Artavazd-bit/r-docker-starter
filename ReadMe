@@ -1,0 +1,16 @@
+mkdir my-r-project
+cd my-r-project
+
+git clone https://github.com/username/repo-name.git
+
+#create container
+docker-compose up -d
+
+name:rstudio
+password:rstudio
+
+# list of all active containers
+docker ps
+
+# to shut off container
+docker stop <my-r-project>-rstudio-1
