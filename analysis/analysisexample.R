@@ -1,4 +1,5 @@
-library(renv)
+library(dplyr)
+library(lavaan)
 
 renv::restore()
 

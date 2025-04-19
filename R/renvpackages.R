@@ -4,6 +4,10 @@ library(renv)
 
 renv::init()
 
-renv::install(c("dplyr", "lavaan"))
+renv::status()
+
+renv::install(c("lavaan", "dplyr"))
+
+renv::activate()
 
 renv::snapshot()
