@@ -1,5 +1,6 @@
+renv::restore()
+
 library(dplyr)
 library(lavaan)
 
-renv::restore()
-
+testvalue <- 12345
