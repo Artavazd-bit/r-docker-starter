@@ -1,0 +1,11 @@
+version: '3'
+services:
+  rstudio:
+    build: .
+    ports:
+      - "8787:8787"
+    environment:
+      - PASSWORD=rstudio  # Change this for security
+      - ROOT=TRUE
+    volumes:
+      - .:/home/rstudio/project

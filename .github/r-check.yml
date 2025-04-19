@@ -1,0 +1,25 @@
+name: R-CMD-check
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  R-CMD-check:
+    runs-on: ubuntu-latest
+    container: rocker/tidyverse:latest
+    
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Install dependencies
+        run: |
+          install.packages("renv")
+          renv::restore()
+        shell: Rscript {0}
+        
+      - name: Check R package
+        run: |
+          R CMD check .
